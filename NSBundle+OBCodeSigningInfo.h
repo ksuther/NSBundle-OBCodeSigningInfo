@@ -7,16 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
-
-typedef enum {
+typedef NS_ENUM(NSInteger, OBCodeSignState) {
     OBCodeSignStateUnsigned = 1,
     OBCodeSignStateSignatureValid,
     OBCodeSignStateSignatureInvalid,
     OBCodeSignStateSignatureNotVerifiable,
     OBCodeSignStateSignatureUnsupported,
     OBCodeSignStateError
-} OBCodeSignState;
-
+};
 
 @interface NSBundle (OBCodeSigningInfo)
 
